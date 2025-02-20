@@ -1,13 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import GlobalStyles from "./styles/GlobalStyles";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import FavouritePage from "./pages/FavouritePage";
+import QuotesApp from "./pages/QuotesApp";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        staleTime: 0,
+      },
+    },
+  });
 
   return (
-    <div>hello</div>
-  )
+    <QueryClientProvider client={queryClient}>
+      <GlobalStyles />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" index element={<QuotesApp />} />
+          <Route path="favourite" element={<FavouritePage />} />
+          <Route path="*" element={<div>Not Found</div>} />
+        </Routes>
+      </BrowserRouter>
+      hello
+    </QueryClientProvider>
+  );
 }
-
-export default App
+export default App;
