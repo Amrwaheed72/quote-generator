@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import FavouritePage from "./pages/FavouritePage";
 import QuotesApp from "./pages/QuotesApp";
 
-function App() {
+const App = () => {
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
@@ -26,5 +26,5 @@ function App() {
       hello
     </QueryClientProvider>
   );
-}
+};
 export default App;
