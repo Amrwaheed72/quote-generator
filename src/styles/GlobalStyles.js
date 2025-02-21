@@ -19,7 +19,8 @@ const GlobalStyles = createGlobalStyle`
   padding: 0;
   margin: 0;
   outline: none;
-  font-family: "Poppins", sans-serif;
+  font-family: "Dosis", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
   /* font-family: "Lilita One", sans-serif; */
   color: var(--color-stone-50);
 

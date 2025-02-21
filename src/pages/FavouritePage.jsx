@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom";
+import FavourtieQuotes from "../components/FavourtieQuotes";
+import Logo from "../ui/Logo";
 
 const FavouritePage = () => {
   return (
     <>
-      <div>Favourites</div>
-      <Link to="/">Quotes</Link>
+      <Logo />
+      <FavourtieQuotes />
     </>
   );
 };
