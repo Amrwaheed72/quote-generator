@@ -23,6 +23,22 @@ const QuotesApp = styled.div`
   box-shadow: -2rem 2rem 6rem rgba(0, 0, 0, 0.6);
   position: relative;
   overflow: hidden;
+  @media (max-width: 880px) {
+    width: 70vmin;
+    aspect-ratio: 2/3.5;
+  }
+  @media (max-width: 702px) {
+    width: 80vmin;
+    aspect-ratio: 2/3.5;
+  }
+  @media (max-width: 570px) {
+    width: 90vmin;
+    aspect-ratio: 2/3.5;
+  }
+  @media (max-width: 420px) {
+    width: 95vmin;
+    aspect-ratio: 2/3.5;
+  }
 `;
 const H1 = styled.h1`
   font-family: "Bebas Neue", sans-serif;
