@@ -20,6 +20,22 @@ const QuotesApp = styled.div`
   padding: 4rem;
   box-shadow: -2rem 2rem 6rem rgba(0, 0, 0, 0.6);
   position: relative;
+  @media (max-width: 880px) {
+    width: 70vmin;
+    aspect-ratio: 2/2.5;
+  }
+  @media (max-width: 702px) {
+    width: 80vmin;
+    aspect-ratio: 2/2.5;
+  }
+  @media (max-width: 570px) {
+    width: 90vmin;
+    aspect-ratio: 2/2.5;
+  }
+  @media (max-width: 420px) {
+    width: 95vmin;
+    aspect-ratio: 2/2.5;
+  }
 `;
 
 const Favourites = styled.div`
@@ -32,6 +48,7 @@ const Favourites = styled.div`
   padding: 3rem 7rem 3rem 3rem;
   overflow-y: auto;
   overflow-x: hidden;
+  
   &::-webkit-scrollbar {
     border-radius: 3rem;
     width: 7px;
