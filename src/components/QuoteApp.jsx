@@ -25,25 +25,28 @@ const QuotesApp = styled.div`
   overflow: hidden;
   @media (max-width: 880px) {
     width: 70vmin;
-    aspect-ratio: 2/3.5;
+    aspect-ratio: 2/3;
   }
   @media (max-width: 702px) {
     width: 80vmin;
-    aspect-ratio: 2/3.5;
+    aspect-ratio: 2/3;
   }
   @media (max-width: 570px) {
     width: 90vmin;
-    aspect-ratio: 2/3.5;
+    aspect-ratio: 2/3;
   }
   @media (max-width: 420px) {
     width: 95vmin;
-    aspect-ratio: 2/3.5;
+    aspect-ratio: 2/3;
   }
 `;
 const H1 = styled.h1`
   font-family: "Bebas Neue", sans-serif;
   font-size: 5rem;
   color: #ddd;
+  @media (max-width: 540px) {
+font-size: 4rem;
+  }
 `;
 const HeartIcon = styled(FaHeart)`
   position: absolute;
@@ -55,6 +58,9 @@ const HeartIcon = styled(FaHeart)`
   text-shadow: -0.3rem, 0.5rem, 2rem rgba(27, 155, 150, 0.3);
   &:active {
     transform: translateY(0.2rem);
+    @media (max-width: 540px) {
+font-size: 3rem;
+  }
   }
 `;
 const Quote = styled.div`
@@ -69,13 +75,19 @@ const Quote = styled.div`
 const QuoteLeftIcon = styled(FaQuoteLeft)`
   font-size: 3rem;
   fill: #ddd;
+  @media (max-width: 540px) {
+font-size: 2rem;
+  }
 `;
 const QuoteRightIcon = styled(FaQuoteRight)`
   font-size: 3rem;
   fill: #ddd;
   position: absolute;
-  bottom: -5rem;
+  bottom: -3rem;
   right: 0;
+  @media (max-width: 540px) {
+font-size: 2rem;
+  }
 `;
 const P = styled.p`
   font-size: clamp(1.6rem, 2cqi, 2.5rem);
@@ -84,12 +96,18 @@ const P = styled.p`
   text-align: center;
   letter-spacing: 0.2rem;
   width: clamp(25rem, 35cqi, 50rem);
+  @media (max-width: 540px) {
+    font-size:clamp(1rem, 1.6cqi, 2rem)
+  }
 `;
 const QutoeAuther = styled.p`
   font-family: "Merienda", sans-serif;
   font-size: 1.4rem;
   color: #888;
   text-align: right;
+  @media (max-width: 540px) {
+font-size: 1rem;
+  }
 `;
 const Buttons = styled.div`
   position: absolute;
@@ -121,6 +139,11 @@ const NewQuotesButton = styled.button`
 
   &:active {
     transform: translateY(0.2rem);
+  }
+  @media (max-width: 480px) {
+    width: 14rem;
+    height: 4rem;
+    font-size: 1rem;
   }
 `;
 const FavQuotesButton = styled(NewQuotesButton)`
